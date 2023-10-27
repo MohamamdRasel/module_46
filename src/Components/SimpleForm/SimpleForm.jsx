@@ -1,16 +1,23 @@
 
 const SimpleForm = () => {
 
-    const handleSubmit = e => {
-        e.preventDefault();           // এটি use করলে form এর page reload হবে না ।
-        console.log('form submitted')
+    const handleSubmit = e =>{   
+        e.preventDefault();
+        console.log(e.target.name.value);
+        console.log(e.target.email.value);
+        console.log(e.target.number.value);
+        console.log('form submitted');
     }
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" />
+                <input type="text" name="name" id="name"/>
                 <br />
-                <input type="button" value="Submit" />
+                <input type="email" name="email" id="" />
+                <br />
+                <input type="number" name="number" id="" />    
+                <br />      
+                <input type="submit" value="Submit" id="submit" />
             </form>
         </div>
     );
