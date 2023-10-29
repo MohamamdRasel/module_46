@@ -16,7 +16,9 @@ const SimpleForm = () => {
                 <input type="email" name="email" id="" />
                 <br />
                 <input type="number" name="number" id="" />    
-                <br />      
+                <br />                 
+                <input onChange={handlePasswordChange} type="password" name="password" id="" required />    
+                <br />    
                 <input type="submit" value="Submit" id="submit" />
             </form>
         </div>
