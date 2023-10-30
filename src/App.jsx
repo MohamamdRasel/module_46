@@ -8,12 +8,12 @@ import ReuseAbleForm from './Components/ReuseAbleForm/ReuseAbleForm'
 
 function App() {
   
-  const handleSignUpSubmit = e =>{
-    e.preventDefault();
+  const handleSignUpSubmit = data =>{
+    console.log('sign up data', data);
 }
 
-const handleUpdateProfile = e =>{
-  e.preventDefault();
+const handleUpdateProfile = data =>{
+  console.log('update profile', data);
 }
 
   return (
@@ -30,12 +30,22 @@ const handleUpdateProfile = e =>{
 
       <ReuseAbleForm 
         formTitle={'Sign UP'} 
-        handleSubmit={handleSignUpSubmit}></ReuseAbleForm>
+        handleSubmit={handleSignUpSubmit}>
+          <div>
+            <h2>Sign Up</h2>
+            <p>Please sign up right now</p>
+          </div>
+        </ReuseAbleForm>
 
       <ReuseAbleForm
         formTitle={'Profile Update'}
         handleSubmit={handleUpdateProfile}
-        submitBtnText = 'Update'></ReuseAbleForm>
+        submitBtnText = 'Update'>
+          <div>
+            <h2>Update Profile</h2>
+            <p>Always keep your profile updated</p>
+          </div>
+        </ReuseAbleForm>
       
     </>
   )
